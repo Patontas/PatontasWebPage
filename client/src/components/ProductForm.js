@@ -36,7 +36,7 @@ const ProductForm = (props) => {
         if (action === 'save') {
             await axios
                 .post(
-                    'https://patontas.onrender.com/api/products/save',
+                    'https://patontas-api.onrender.com/api/products/save',
                     formData,
                     {
                         headers: {
@@ -56,7 +56,7 @@ const ProductForm = (props) => {
         } else if (action === 'update') {
             await axios
                 .put(
-                    `https://patontas.onrender.com/api/products/update/${product._id}`,
+                    `https://patontas-api.onrender.com/api/products/update/${product._id}`,
                     formData,
                     {
                         headers: {

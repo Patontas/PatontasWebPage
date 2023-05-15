@@ -69,7 +69,7 @@ const OrderDetails = () => {
             try {
                 dispatch({ type: 'PAY_REQUEST' });
                 const { data } = await axios.put(
-                    `https://patontas.onrender.com/api/orders/pay/${order._id}`,
+                    `https://patontas-api.onrender.com/api/orders/pay/${order._id}`,
                     details,
                     {
                         headers: {
@@ -93,7 +93,7 @@ const OrderDetails = () => {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
                 const res = await axios.get(
-                    `https://patontas.onrender.com/api/orders/fetch-order/${id}`,
+                    `https://patontas-api.onrender.com/api/orders/fetch-order/${id}`,
                     {
                         headers: {
                             authorization: `Bearer ${userInfo.token}`,
@@ -110,7 +110,7 @@ const OrderDetails = () => {
         if (!order.isPaid) {
             const loadPayPalScript = async () => {
                 const { data: clientId } = await axios.get(
-                    `https://patontas.onrender.com/api/keys/paypal`,
+                    `https://patontas-api.onrender.com/api/keys/paypal`,
                     {
                         headers: {
                             authorization: `Bearer ${userInfo.token}`,

@@ -41,7 +41,7 @@ const FeatureProducts = () => {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
                 const result = await axios.get(
-                    'https://patontas.onrender.comhttps://patontas.onrender.com/api/products'
+                    'https://patontas-api.onrender.com/api/products'
                 );
                 dispatch({ type: 'FETCH_SUCCESS', payload: result.data.data });
             } catch (err) {

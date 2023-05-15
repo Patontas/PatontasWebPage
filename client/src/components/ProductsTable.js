@@ -21,7 +21,7 @@ const ProductsTable = (props) => {
         const fetchProducts = async () => {
             try {
                 const res = await axios.get(
-                    'https://patontas.onrender.com/api/products/',
+                    'https://patontas-api.onrender.com/api/products/',
                     {
                         headers: {
                             authorization: `Bearer ${userInfo.token}`,

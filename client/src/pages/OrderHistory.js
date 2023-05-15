@@ -41,7 +41,7 @@ const OrderHistory = () => {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
                 const res = await axios.get(
-                    'https://patontas.onrender.com/api/orders/fetch-orders',
+                    'https://patontas-api.onrender.com/api/orders/fetch-orders',
                     {
                         headers: {
                             authorization: `Bearer ${userInfo.token}`,

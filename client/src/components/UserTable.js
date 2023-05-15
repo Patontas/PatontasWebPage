@@ -18,7 +18,7 @@ const UserTable = () => {
         const fetchUsers = async () => {
             try {
                 const res = await axios.get(
-                    'https://patontas.onrender.com/api/users/fetch-users',
+                    'https://patontas-api.onrender.com/api/users/fetch-users',
                     {
                         headers: {
                             authorization: `Bearer ${userInfo.token}`,
