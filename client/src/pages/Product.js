@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom';
 import { Store } from '../Store';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import Ratings from '../components/Ratings';
 import { getError } from '../utils';
 
 const reducer = (state, action) => {
