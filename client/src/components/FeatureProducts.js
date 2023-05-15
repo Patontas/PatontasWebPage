@@ -40,7 +40,7 @@ const FeatureProducts = () => {
         const fetchData = async (req, res) => {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
-                const result = await axios.get('/api/products');
+                const result = await axios.get('/v1/api/products');
                 dispatch({ type: 'FETCH_SUCCESS', payload: result.data.data });
             } catch (err) {
                 dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
