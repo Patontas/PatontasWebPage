@@ -19,7 +19,7 @@ app.get('/api/keys/paypal', (req, res) => {
 //Routes
 app.use('/api', routes);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 10000;
 app.listen(port, () =>
     console.log(`Server Running on  http://localhost:${port}`)
 );
