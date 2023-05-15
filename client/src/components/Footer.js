@@ -1,12 +1,7 @@
-import {
-    AiFillFacebook,
-    AiFillInstagram,
-    AiFillMail,
-    AiFillTwitterSquare,
-} from 'react-icons/ai';
-import { BsFillTelephoneFill, BsTelegram } from 'react-icons/bs';
+import { AiFillInstagram, AiFillMail } from 'react-icons/ai';
+import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaWhatsappSquare } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -26,6 +21,21 @@ const Footer = () => {
                         </div>
                     </Link>
                 </div>
+                <div>
+                    <nav>
+                        <ul className="list-none flex flex-col justify-between items-center ml-auto gap-1">
+                            <li className="px-2 hover:scale-105 hover:shadow-lg rounded-full text-lg">
+                                <NavLink to="/">Home</NavLink>
+                            </li>
+                            <li className="px-2 hover:scale-105 hover:shadow-lg rounded-full text-lg">
+                                <NavLink to="/products">Products</NavLink>
+                            </li>
+                            <li className="px-2 hover:scale-105 hover:shadow-lg rounded-full text-lg">
+                                <NavLink to="/cart">Cart</NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <div className="text-lg font-bold uppercase flex flex-col gap-2 items-center">
                     <p>Social Media</p>
                     <div className="flex gap-2">
@@ -43,24 +53,6 @@ const Footer = () => {
                                 Instagram
                             </p>
                         </Link>
-                        <Link to={'/'} className="group">
-                            <AiFillTwitterSquare
-                                size={30}
-                                className="group-hover:hidden"
-                            />
-                            <p className="hidden group-hover:inline-flex opacity-40 px-1 text-white bg-gray-700 rounded-lg relative top-0 left-0">
-                                twitter
-                            </p>
-                        </Link>
-                        <Link to={'/'} className="group">
-                            <AiFillFacebook
-                                size={30}
-                                className="group-hover:hidden"
-                            />
-                            <p className="hidden group-hover:inline-flex opacity-40 px-1 text-white bg-gray-700 rounded-lg relative top-0 left-0">
-                                facebook
-                            </p>
-                        </Link>
                         <Link
                             to={
                                 'https://api.whatsapp.com/message/6SDPDVJHVXX7F1?autoload=1&app_absent=0'
@@ -75,23 +67,14 @@ const Footer = () => {
                                 whatsApp
                             </p>
                         </Link>
-                        <Link to={'/'} className="group">
-                            <BsTelegram
-                                size={30}
-                                className="group-hover:hidden"
-                            />
-                            <p className="hidden group-hover:inline-flex opacity-40 px-1 text-white bg-gray-700 rounded-lg relative top-0 left-0">
-                                Telegram
-                            </p>
-                        </Link>
                     </div>
                     <div className="flex items-center gap-2">
                         <BsFillTelephoneFill size={20} />
-                        <p>(+xx) xxxxxxxx</p>
+                        <p>(+57) 3023879940</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <AiFillMail size={20} />
-                        <p>email@email.com</p>
+                        <p>patotasaccesorios@gmail.com</p>
                     </div>
                 </div>
             </div>
