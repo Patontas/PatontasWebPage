@@ -5,7 +5,6 @@ const routes = require('./routes/router.js');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const path = require('path');
 
 app.use(express.json({ limit: '50mb' }));
 app.use(cors());
@@ -19,12 +18,6 @@ app.get('/api/keys/paypal', (req, res) => {
 
 //Routes
 app.use('/api', routes);
-
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '/client/build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
-});
 
 const port = process.env.PORT || 8080;
 app.listen(port, () =>
