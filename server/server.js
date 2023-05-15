@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //PayPal API
-app.get('/api/keys/paypal', (req, res) => {
+app.get('https://patontas.onrender.com/api/keys/paypal', (req, res) => {
     res.send(process.env.PAYPAL_CLIENT_ID || 'sb ');
 });
 
