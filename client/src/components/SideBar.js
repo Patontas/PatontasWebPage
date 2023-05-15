@@ -16,8 +16,8 @@ const SideBar = (props) => {
         <div
             className={`${
                 open
-                    ? 'w-64 fixed top-0 bg-orange'
-                    : 'w-20 fixed top-0 bg-orange'
+                    ? 'w-64 fixed top-0 bg-yellow'
+                    : 'w-20 fixed top-0 bg-yellow'
             } duration-300 z-50 h-screen`}>
             <div className="w-full h-fit flex items-center p-4">
                 <div
@@ -50,7 +50,7 @@ const SideBar = (props) => {
             </div>
             {open ? (
                 <aside
-                    className={`bg-orange w-full absolute left-0 top-20 z-9999 flex flex-col rounded-lg`}>
+                    className={`bg-yellow w-full absolute left-0 top-20 z-9999 flex flex-col rounded-lg`}>
                     <nav className="p-4 lg:mt-4 lg:px-6 text-white">
                         <div className="w-full">
                             <ul className="mb-6 flex flex-col gap-2">
@@ -153,7 +153,7 @@ const SideBar = (props) => {
                 </aside>
             ) : (
                 <aside
-                    className={`bg-orange absolute left-0 top-20 z-9999 w-full flex flex-col`}>
+                    className={`bg-yellow absolute left-0 top-20 z-9999 w-full flex flex-col`}>
                     <nav className="p-4 lg:px-6 text-white">
                         <div className="w-full">
                             <ul className="mb-6 flex flex-col justify-center items-center gap-2">

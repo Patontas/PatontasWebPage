@@ -38,7 +38,7 @@ const ProductCard = (data) => {
             </div>
             <div className="py-4 px-2 lg:px-4 text-center font-bold">
                 <Link to={`/product/slug/${product.slug}`}>
-                    <p>{product.name}</p>
+                    <p className="text-lg xl:text-xl">{product.name}</p>
                 </Link>
                 <p className="mt-1 text-lg">
                     <strong>${product.price}</strong>

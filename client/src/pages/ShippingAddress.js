@@ -149,7 +149,7 @@ const ShippingAddress = () => {
                     </div>
                     <button
                         type="submit"
-                        className="rounded-lg border hover:bg-blue-500 bg-orange py-3 px-8 
+                        className="rounded-lg border hover:bg-blue-500 bg-yellow py-3 px-8 
                         text-black font-medium font-serif text-2xl mt-4">
                         Countinue
                     </button>

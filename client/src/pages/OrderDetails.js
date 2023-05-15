@@ -136,17 +136,16 @@ const OrderDetails = () => {
     ) : error ? (
         <MessageBox>{error}</MessageBox>
     ) : (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto px-4">
             <Helmet>
                 <title>Order Preview</title>
             </Helmet>
-            <h2 className="text-center text-3xl py-4 truncate">
-                {' '}
+            <h2 className="text-center text-xl xl:text-3xl mx-5 py-4 truncate">
                 Order: #<span>{order ? order._id : ''}</span>
             </h2>
             <div className="flex flex-col md:flex-row gap-8">
                 <section className="w-full lg:w-[70%] flex flex-col gap-4 ">
-                    <div className="flex flex-col gap-2 p-6 border border-orange rounded-lg">
+                    <div className="flex flex-col gap-2 p-6 border border-yellow rounded-lg">
                         <h1 className="text-2xl font-medium ">Shipping</h1>
                         <div>
                             <p className="text-lg">
@@ -172,7 +171,7 @@ const OrderDetails = () => {
                             </div>
                         )}
                     </div>
-                    <div className="flex flex-col gap-2 p-6 border border-orange rounded-lg">
+                    <div className="flex flex-col gap-2 p-6 border border-yellow rounded-lg">
                         <h1 className="text-2xl font-medium ">Payment</h1>
                         <div>
                             <p className="text-lg">
@@ -193,7 +192,7 @@ const OrderDetails = () => {
                             </div>
                         )}
                     </div>
-                    <div className="flex flex-col gap-2 p-6 border border-orange rounded-lg">
+                    <div className="flex flex-col gap-2 p-6 border border-yellow rounded-lg">
                         <h1 className="text-2xl font-medium ">Items</h1>
                         <div className="w-full">
                             <ul className=" flex flex-col w-full rounded-lg ">
@@ -236,7 +235,7 @@ const OrderDetails = () => {
                     </div>
                 </section>
                 <section className="w-full lg:w-[30%] flex flex-col gap-4 ">
-                    <div className="flex flex-col gap-2 p-6 border border-orange rounded-lg">
+                    <div className="flex flex-col gap-2 p-6 border border-yellow rounded-lg">
                         <h1 className="text-2xl font-medium mb-2">
                             Order Summary
                         </h1>
@@ -246,14 +245,14 @@ const OrderDetails = () => {
                             </div>
                             <p>${order.itemsPrice}</p>
                         </div>
-                        <hr className="border border-orange" />
+                        <hr className="border border-yellow" />
                         <div className="flex justify-start px-4 text-2xl">
                             <div className="w-2/3">
                                 <p>Shipping</p>
                             </div>
                             <p>${order.shippingPrice}</p>
                         </div>
-                        <hr className="border border-orange" />
+                        <hr className="border border-yellow" />
                         <div className="flex justify-start px-4 text-2xl font-bold">
                             <div className="w-2/3">
                                 <p>Order Total</p>
@@ -264,7 +263,7 @@ const OrderDetails = () => {
                             <div>
                                 {!isPending && (
                                     <div className="mb-4">
-                                        <hr className="border border-orange" />
+                                        <hr className="border border-yellow" />
                                         {order.paymentMethod === 'PayPal' ? (
                                             <PayPalButtons
                                                 createOrder={createOrder}
@@ -274,7 +273,7 @@ const OrderDetails = () => {
                                         ) : (
                                             <button
                                                 type="button"
-                                                className="rounded-lg border hover:bg-blue-600 bg-orange p-2 w-full text-white font-bold text-lg">
+                                                className="rounded-lg border hover:bg-blue-600 bg-yellow p-2 w-full text-white font-bold text-lg">
                                                 Stripe Payment
                                             </button>
                                         )}

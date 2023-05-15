@@ -39,7 +39,7 @@ const PlaceOrder = () => {
         cart.cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
     );
 
-    cart.shippingPrice = cart.itemsPrice > 100 ? round2(0) : round2(10);
+    cart.shippingPrice = cart.itemsPrice > 100000 ? round2(0) : round2(10000);
     cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
 
     const placeOrderHandler = async () => {
@@ -81,7 +81,7 @@ const PlaceOrder = () => {
             <h2 className="text-center text-3xl py-4 ">Order Preview</h2>
             <div className="flex flex-col md:flex-row gap-4">
                 <section className="w-full lg:w-[70%] flex flex-col gap-4">
-                    <div className="flex flex-col gap-3 p-6  border border-orange rounded-lg shadow">
+                    <div className="flex flex-col gap-3 p-6  border border-yellow rounded-lg shadow">
                         <h1 className="text-2xl font-medium ">Shipping</h1>
                         <div>
                             <p className="text-lg">
@@ -98,7 +98,7 @@ const PlaceOrder = () => {
                             Edit
                         </Link>
                     </div>
-                    <div className="flex flex-col gap-3 p-6 border border-orange rounded-lg shadow">
+                    <div className="flex flex-col gap-3 p-6 border border-yellow rounded-lg shadow">
                         <h1 className="text-2xl font-medium ">Payment</h1>
                         <div>
                             <p className="text-lg">
@@ -111,7 +111,7 @@ const PlaceOrder = () => {
                             Edit
                         </Link>
                     </div>
-                    <div className="flex flex-col gap-3 p-6 border border-orange rounded-lg shadow">
+                    <div className="flex flex-col gap-3 p-6 border border-yellow rounded-lg shadow">
                         <h1 className="text-2xl font-medium ">Items</h1>
                         <div className="w-full">
                             {cart.cartItems.length === 0 ? (
@@ -139,7 +139,7 @@ const PlaceOrder = () => {
                     </div>
                 </section>
                 <section className="w-full lg:w-[30%] lg:mx-4 lg:px-6">
-                    <div className="flex flex-col gap-2 p-6 border border-orange rounded-lg">
+                    <div className="flex flex-col gap-2 p-6 border border-yellow rounded-lg">
                         <h1 className="text-2xl font-medium mb-2">
                             Order Summary
                         </h1>
@@ -149,25 +149,25 @@ const PlaceOrder = () => {
                             </div>
                             <p>${cart.itemsPrice}</p>
                         </div>
-                        <hr className="border border-orange" />
+                        <hr className="border border-yellow" />
                         <div className="flex justify-start px-4 text-2xl">
                             <div className="w-2/3">
                                 <p>Shipping</p>
                             </div>
                             <p>${cart.shippingPrice}</p>
                         </div>
-                        <hr className="border border-orange" />
+                        <hr className="border border-yellow" />
                         <div className="flex justify-start px-4 text-2xl font-bold">
                             <div className="w-2/3">
                                 <p>Order Total</p>
                             </div>
                             <p>${cart.totalPrice}</p>
                         </div>
-                        <hr className="border border-orange" />
+                        <hr className="border border-yellow" />
                         <button
                             onClick={placeOrderHandler}
                             type="button"
-                            className="rounded-lg border hover:bg-blue-600 bg-orange p-2 w-full text-white font-bold text-lg">
+                            className="rounded-lg border hover:bg-blue-600 bg-yellow p-2 w-full text-white font-bold text-lg">
                             Place Order
                         </button>
                     </div>

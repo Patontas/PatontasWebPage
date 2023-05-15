@@ -6,7 +6,7 @@ const CheckOutSteps = (props) => {
             <div
                 className={
                     props.step1
-                        ? ' border-b-4 border-yellow w-full text-orange font-bold mr-1'
+                        ? ' border-b-4 border-yellow w-full text-yellow font-bold mr-1'
                         : 'border-b-4 border-gray-500 text-gray-500 font-bold w-full'
                 }>
                 <p className="px-4 text-xl">Sign In</p>
@@ -14,7 +14,7 @@ const CheckOutSteps = (props) => {
             <div
                 className={
                     props.step2
-                        ? ' border-b-4 border-yellow w-full text-orange font-bold mr-1'
+                        ? ' border-b-4 border-yellow w-full text-yellow font-bold mr-1'
                         : 'border-b-4 border-gray-500 text-gray-500 font-bold w-full'
                 }>
                 <p className="px-4 text-xl">Shipping and Payment</p>
@@ -22,7 +22,7 @@ const CheckOutSteps = (props) => {
             <div
                 className={
                     props.step3
-                        ? ' border-b-4 border-yellow w-full text-orange font-bold mr-1'
+                        ? ' border-b-4 border-yellow w-full text-yellow font-bold mr-1'
                         : 'border-b-4 border-gray-500 text-gray-500 font-bold w-full'
                 }>
                 <p className="px-4 text-xl">Place Order</p>

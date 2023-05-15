@@ -45,8 +45,8 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/save', async (req, res) => {
-    const { name, slug, category, price, countInStock } = req.body;
-
+    const { name, slug, category, price, countInStock, description } = req.body;
+    console.log(req.name);
     try {
         if (!req.file) {
             return res.status(400).json({ msg: 'Image required' });
@@ -70,8 +70,9 @@ router.post('/save', async (req, res) => {
             images: req.file.path,
             price,
             countInStock,
+            description,
         });
-        res.status(201).json({ success: true, data: product });
+        res.status(201).json({ msg: 'Product Created Successfully' });
     } catch (error) {
         res.status(500).json(error);
     }
@@ -79,8 +80,7 @@ router.post('/save', async (req, res) => {
 
 //Update Product
 router.put('/update/:id', async (req, res) => {
-    const { name, slug, category, price, countInStock } = req.body;
-    console.log(req.body);
+    const { name, slug, category, price, countInStock, description } = req.body;
     try {
         const token = getTokenFromHeaders(req);
         if (!token) {
@@ -100,13 +100,11 @@ router.put('/update/:id', async (req, res) => {
         product.slug = slug;
         product.countInStock = countInStock;
         product.category = category;
+        product.description = description;
         if (req.file) {
             product.images = req.file.path;
         }
-
         await product.save();
-
-        console.log(product);
 
         res.status(201).json({ msg: 'Product updated successfully' });
     } catch (error) {

@@ -156,7 +156,7 @@ const OrderHistory = () => {
                                                         `/order/${order._id}`
                                                     )
                                                 }
-                                                className="w-full rounded-lg border hover:bg-blue-500 bg-orange p-2 
+                                                className="w-full rounded-lg border hover:bg-blue-500 bg-yellow p-2 
                                             text-black font-medium font-serif text-xl">
                                                 Details
                                             </button>
@@ -165,7 +165,7 @@ const OrderHistory = () => {
                                 ))}
                             </tbody>
                         </table>
-                        <div className="md:hidden border border-orange rounded-lg">
+                        <div className="md:hidden border border-yellow rounded-lg">
                             <ul>
                                 {orders.map((order) => (
                                     <li
@@ -203,7 +203,7 @@ const OrderHistory = () => {
                                                         `/order/${order._id}`
                                                     )
                                                 }
-                                                className="w-full rounded-lg border hover:bg-blue-500 bg-orange py-3 px-4 
+                                                className="w-full rounded-lg border hover:bg-blue-500 bg-yellow py-3 px-4 
                                             text-black font-medium font-serif ">
                                                 Details
                                             </button>

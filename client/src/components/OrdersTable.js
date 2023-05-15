@@ -260,7 +260,7 @@ const OrdersTable = () => {
                                       <td className="flex items-center gap-4 p-3">
                                           <Link
                                               to={`/order/${order._id}`}
-                                              className="rounded-lg border hover:bg-blue-500 bg-orange px-6 py-2 
+                                              className="rounded-lg border hover:bg-blue-500 bg-yellow px-6 py-2 
                        text-black font-medium font-serif">
                                               {' '}
                                               Details
@@ -346,7 +346,7 @@ const OrdersTable = () => {
                                       <td className="flex items-center gap-4 p-3">
                                           <Link
                                               to={`/order/${order._id}`}
-                                              className="rounded-lg border hover:bg-blue-500 bg-orange px-6 py-2 
+                                              className="rounded-lg border hover:bg-blue-500 bg-yellow px-6 py-2 
                        text-black font-medium font-serif">
                                               Details
                                           </Link>

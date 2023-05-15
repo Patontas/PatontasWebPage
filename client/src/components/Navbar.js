@@ -24,11 +24,11 @@ const Navbar = () => {
     };
 
     return (
-        <div className="shadow-sm bg-pink backdrop-blur-lg py-4 px-2 text-white ">
-            <nav className="flex items-center container mx-auto">
+        <div className="shadow-sm bg-pink backdrop-blur-lg py-4 px-2 text-white max-w-[100%]">
+            <nav className="flex items-center justify-between gap-0 lg:container lg:mx-auto">
                 <div>
                     <Link to="/">
-                        <div className="flex gap-2 items-end">
+                        <div className="flex md:gap-2 items-end">
                             <img
                                 className="w-8 h-8 lg:w-10 lg:h-10"
                                 src="./p_logo.png"

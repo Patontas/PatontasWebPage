@@ -17,6 +17,7 @@ const ProductForm = (props) => {
     const [slug, setSlug] = useState(product.slug || '');
     const [countInStock, setCountInStock] = useState(product.countInStock || 0);
     const [category, setCategory] = useState(product.category || '');
+    const [description, setDescription] = useState('');
     // eslint-disable-next-line
     const [image, setImage] = useState(null);
 
@@ -34,11 +35,14 @@ const ProductForm = (props) => {
         const formData = new FormData(form);
         if (action === 'save') {
             await axios
-                .post(`/api/products/save`, formData, {
+                .post('/api/products/save', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                         authorization: `Bearer ${userInfo.token}`,
                     },
+                })
+                .then((res) => {
+                    alert(res.data.msg);
                 })
                 .catch((err) => {
                     alert(err.message);
@@ -117,11 +121,8 @@ const ProductForm = (props) => {
                             onChange={(e) => setCategory(e.target.value)}
                             className="border rounded-lg bg-gray-50 px-3 py-1">
                             <option disabled>Actual: {category}</option>
-                            <option value="3x3">3X3</option>
-                            <option value="4x4">4X4</option>
-                            <option value="5x5">5X5</option>
-                            <option value="6x6">6X6</option>
-                            <option value="megaminx">Megaminx</option>
+                            <option value="aretes">Aretes</option>
+                            <option value="collares">collares</option>
                         </select>
                     </div>
                     <div className="w-2/6 flex flex-col text-lg xl:text-xl gap-1">
@@ -146,10 +147,22 @@ const ProductForm = (props) => {
                         />
                     </div>
                 </div>
+                <div className="w-2/6 flex flex-col gap-1">
+                    <label htmlFor="description" className="text-lg xl:text-xl">
+                        Description
+                    </label>
+                    <textarea
+                        name="description"
+                        id="description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        className="border rounded-lg bg-gray-50 px-3 py-1"
+                    />
+                </div>
                 <div className="w-1/2 flex gap-4">
                     <button
                         type="submit"
-                        className="w-1/4 rounded-lg border hover:bg-blue-500 bg-orange py-3 px-8 
+                        className="w-1/4 rounded-lg border hover:bg-blue-500 bg-yellow py-3 px-8 
         text-black font-bold font-serif mt-4">
                         {action}
                     </button>
@@ -159,7 +172,7 @@ const ProductForm = (props) => {
                             setContent('productsList');
                             props.ctChange('productsList');
                         }}
-                        className="w-1/4 rounded-lg border hover:bg-blue-500 bg-orange py-3 px-8 
+                        className="w-1/4 rounded-lg border hover:bg-blue-500 bg-yellow py-3 px-8 
         text-black font-bold font-serif mt-4">
                         Return
                     </button>

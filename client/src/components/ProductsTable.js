@@ -152,7 +152,7 @@ const ProductsTable = (props) => {
                                                       setContent('productForm');
                                                       setProductForm(product);
                                                   }}
-                                                  className="w-full rounded-lg border hover:bg-blue-500 bg-orange p-2 
+                                                  className="w-full rounded-lg border hover:bg-blue-500 bg-yellow p-2 
                        text-black font-medium font-serif text-xl">
                                                   Edit
                                               </button>
@@ -204,7 +204,7 @@ const ProductsTable = (props) => {
                                                       setContent('productForm');
                                                       setProductForm(product);
                                                   }}
-                                                  className="rounded-lg border hover:bg-blue-500 bg-orange px-6 py-2 
+                                                  className="rounded-lg border hover:bg-blue-500 bg-yellow px-6 py-2 
                        text-black font-medium font-serif">
                                                   Edit
                                               </button>

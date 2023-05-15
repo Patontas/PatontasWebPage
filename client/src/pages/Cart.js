@@ -70,7 +70,7 @@ const Cart = () => {
                         <button
                             onClick={checkoutHandler}
                             type="button"
-                            className="rounded-lg border hover:bg-blue-600 bg-orange p-2 w-full text-white font-bold text-lg">
+                            className="rounded-lg border hover:bg-blue-600 bg-yellow p-2 w-full text-white font-bold text-lg">
                             Checkout
                         </button>
                     )}

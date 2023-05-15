@@ -31,7 +31,7 @@ const Products = () => {
     const [priceFilter, setPriceFilter] = useState(false);
     const [priceSort, setPriceSort] = useState('default');
     const [priceMin, setPriceMin] = useState(0);
-    const [priceMax, setPriceMax] = useState(1000);
+    const [priceMax, setPriceMax] = useState(1000000);
 
     const [{ loading, products, error }, dispatch] = useReducer(reducer, {
         loading: true,
@@ -43,7 +43,7 @@ const Products = () => {
 
     const para = useRef(null);
 
-    const categories = ['3x3', '4x4', '5x5', '6x6', 'megaminx'];
+    const categories = ['aretes', 'collares'];
 
     useEffect(() => {
         const fetchData = async (req, res) => {

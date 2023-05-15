@@ -143,7 +143,7 @@ const UserTable = () => {
                                                       user.isAdmin
                                                   )
                                               }
-                                              className="rounded-lg border hover:bg-blue-500 bg-orange p-2 
+                                              className="rounded-lg border hover:bg-blue-500 bg-yellow p-2 
                     text-white font-bold font-serif">
                                               Change
                                           </button>
@@ -184,7 +184,7 @@ const UserTable = () => {
                                                       user.isAdmin
                                                   )
                                               }
-                                              className="rounded-lg border hover:bg-blue-500 bg-orange p-2 
+                                              className="rounded-lg border hover:bg-blue-500 bg-yellow p-2 
                     text-white font-bold font-serif">
                                               Change
                                           </button>
